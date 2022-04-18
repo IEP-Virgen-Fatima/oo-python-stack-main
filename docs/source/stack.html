@@ -1,0 +1,223 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>stack package &#8212; stack  documentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinxdoc.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" /> 
+  </head><body>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">stack  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">stack package</a></li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <section id="stack-package">
+<h1>stack package<a class="headerlink" href="#stack-package" title="Permalink to this headline">¶</a></h1>
+<section id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="module-stack.stack_of_non_negative_integers">
+<span id="stack-stack-of-non-negative-integers-module"></span><h2>stack.stack_of_non_negative_integers module<a class="headerlink" href="#module-stack.stack_of_non_negative_integers" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">stack.stack_of_non_negative_integers.</span></span><span class="sig-name descname"><span class="pre">StackOfNonNegativeIntegers</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Stack of non negative integers, with given capacity.</p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.DEFAULT_CAPACITY">
+<span class="sig-name descname"><span class="pre">DEFAULT_CAPACITY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">5</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.DEFAULT_CAPACITY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Default capacity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.SUCCESS">
+<span class="sig-name descname"><span class="pre">SUCCESS</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">0</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.SUCCESS" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return status for success.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.STACK_IS_FULL">
+<span class="sig-name descname"><span class="pre">STACK_IS_FULL</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-1</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.STACK_IS_FULL" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return status for full stack error.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.STACK_IS_EMPTY">
+<span class="sig-name descname"><span class="pre">STACK_IS_EMPTY</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-2</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.STACK_IS_EMPTY" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return status for empty stack error.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.ELEMENT_IS_NEGATIVE">
+<span class="sig-name descname"><span class="pre">ELEMENT_IS_NEGATIVE</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">Final</span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">-3</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.ELEMENT_IS_NEGATIVE" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return status for negative element error.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.__init__">
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">capacity</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.__init__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Creates a new stack instance with given capacity (optional).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>capacity</strong> – (int) optional capacity</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._capacity">
+<span class="sig-name descname"><span class="pre">_capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>(instance attribute) capacity.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._size">
+<span class="sig-name descname"><span class="pre">_size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._size" title="Permalink to this definition">¶</a></dt>
+<dd><p>(instance attribute) element count.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._elements">
+<span class="sig-name descname"><span class="pre">_elements</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="p"><span class="pre">[</span></span><span class="pre">int</span><span class="p"><span class="pre">]</span></span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers._elements" title="Permalink to this definition">¶</a></dt>
+<dd><p>(instance attribute) elements.</p>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.size">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">size</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.size" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns size.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(int) size</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py property">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.capacity">
+<em class="property"><span class="pre">property</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">capacity</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="pre">int</span></em><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.capacity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns capacity.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(int) capacity</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.push">
+<span class="sig-name descname"><span class="pre">push</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">element</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.push" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pushes an element on top of stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>element</strong> – (int) element to push</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>(int)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>SUCCESS if element has been pushed</p></li>
+<li><p>NEGATIVE_ELEMENT if element is negative</p></li>
+<li><p>STACK_IS_FULL if stack is full</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.pop">
+<span class="sig-name descname"><span class="pre">pop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.pop" title="Permalink to this definition">¶</a></dt>
+<dd><p>Pops (removes and returns) element on top of stack.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(int)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>element on top of stack if it exists</p></li>
+<li><p>STACK_IS_EMPTY if stack is empty</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.view">
+<span class="sig-name descname"><span class="pre">view</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.view" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns element on top of stack (without removing it).</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(int)</p>
+</dd>
+</dl>
+<ul class="simple">
+<li><p>element on top of stack if it exists</p></li>
+<li><p>STACK_IS_EMPTY if stack is empty</p></li>
+</ul>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.__str__">
+<span class="sig-name descname"><span class="pre">__str__</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">str</span></span></span><a class="headerlink" href="#stack.stack_of_non_negative_integers.StackOfNonNegativeIntegers.__str__" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns a string representation of the stack like:</p>
+<ul class="simple">
+<li><p>“stack, capacity=…, size=…” as first line</p></li>
+<li><p>one element per line, top first.</p></li>
+</ul>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>(str) a string representation of the stack</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</section>
+</section>
+
+
+            <div class="clearer"></div>
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../genindex.html" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">stack  documentation</a> &#187;</li>
+        <li class="nav-item nav-item-this"><a href="">stack package</a></li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2022, S. Jean.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 4.5.0.
+    </div>
+  </body>
+</html>
